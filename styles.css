@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+html {
+    display: flex;
+    background-color: rgb(22, 20, 71);
+    align-items: center;
+    justify-content: center;
+
+}
+
+.large-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-self: center;
+    margin: 70px;
+    justify-content: center;
+}
+
+img {
+    border-radius: 20px;
+}
+
+.split-box {
+    display: flex;
+    background-color: rgb(44, 41, 145);
+    width: 30vw;
+    height: 60vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 50px;
+    margin: 20px;
+    border-radius: 20px;
+}
+
+#split-box2 {
+    background-color: rgb(22, 20, 71);
+}
+
+#jokeButton {
+    font-family: 'Poppins', sans-serif;
+    border-radius: 30px;
+    background-color: #33b993;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+#jokeButton:hover {
+    background-color: #22a374;
+    transition: background-color 0.3s ease;
+    transform: scale(1.1);
+    /* Increase the size on hover */
+    font-size: 18px;
+    /* Change font size on hover */
+}
+
+p,
+h1,
+h5 {
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}

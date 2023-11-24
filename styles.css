@@ -5,7 +5,6 @@ html {
     background-color: rgb(22, 20, 71);
     align-items: center;
     justify-content: center;
-
 }
 
 .large-container {
@@ -39,7 +38,7 @@ img {
     background-color: rgb(22, 20, 71);
 }
 
-#jokeButton {
+.jokeButton {
     font-family: 'Poppins', sans-serif;
     border-radius: 30px;
     background-color: #33b993;
@@ -47,9 +46,10 @@ img {
     padding: 10px 20px;
     border: none;
     cursor: pointer;
+    margin: 2.5px;
 }
 
-#jokeButton:hover {
+.jokeButton:hover {
     background-color: #22a374;
     transition: background-color 0.3s ease;
     transform: scale(1.1);

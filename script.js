@@ -16,6 +16,32 @@ document.addEventListener('click', event => {
     }
 })
 
+async function getDadJoke(jokeType) {
+    const options = {
+        method: 'GET', // specify this is a GET request, not a PUT or POST
+        headers: {
+            "Accept": "application/json", // request the response in JSON format
+        }
+    }
+    
+    try {
+        const response = await fetch('https://icanhazdadjoke.com/search?term=' + jokeType, options)
+        const responseAsJson = await response.json()
+        const randomElement = responseAsJson.results[(Math.floor(Math.random() * responseAsJson.results.length))];
+        printJoke(randomElement.joke)
+    }
+
+    catch (error) {
+        console.err(error)
+    }
+}
+
+function printJoke(joke) {
+    document.getElementById('jokeDisplay').innerText = joke;
+}
+
+//alternative approach
+/*
 function getDadJoke(jokeType) {
     const options = {
         method: 'GET', // specify this is a GET request, not a PUT or POST
@@ -36,8 +62,4 @@ function getDadJoke(jokeType) {
         .catch(error => {
             console.error(error)
         })
-}
-
-function printJoke(joke) {
-    document.getElementById('jokeDisplay').innerText = joke;
-}
+} */
